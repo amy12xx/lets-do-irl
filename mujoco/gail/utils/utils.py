@@ -5,6 +5,7 @@ from torch.distributions import Normal
 def get_action(mu, std):
     action = torch.normal(mu, std)
     action = action.data.numpy()
+    print(action)
     return action
 
 def get_entropy(mu, std):
