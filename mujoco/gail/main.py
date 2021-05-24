@@ -60,7 +60,7 @@ def main():
     torch.manual_seed(args.seed)
 
     num_inputs = env.observation_space.shape[0]
-    num_actions = env.action_space.shape[0]
+    num_actions = env.action_space.n
     running_state = ZFilter((num_inputs,), clip=5)
 
     print('state size:', num_inputs) 
